@@ -1,0 +1,131 @@
+﻿body{
+    background-color: #161616;
+    color: white;
+
+}
+.wrapper {
+    height: 99vh;
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+    margin-left:2vw;
+    float: left;
+    align-content:center;
+}
+
+
+.typing-demo {
+    width: 39ch;
+    animation: typing 4s steps(39), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+
+#grid {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+    #grid > div {
+        float: left;
+        border: 2px solid black;
+        width: 45%;
+        margin: 1.66%;
+    }
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+}
+.text{
+    color:black;
+    margin-top:30%;
+    font-weight:bold;
+    font-size: 1.5em;
+}
+.card {
+    position:relative;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Play';
+    
+}
+    .card:hover .overlay{
+        
+        opacity:0.8;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+
+
+@media screen and (max-width: 800px){
+    #grid > div{
+        
+    }
+    #grid{
+        height: 400px;
+        width: 400px;
+    }
+    .text{
+        font-size: 1em;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .typing-demo {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .typing-demo {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 200px) {
+    .typing-demo {
+        font-size: 1em;
+    }
+}
